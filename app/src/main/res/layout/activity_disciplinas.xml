@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DisciplinasActivity"
+    android:transcriptMode="disabled"
+    android:windowSoftInputMode="adjustNothing"
+    android:nestedScrollingEnabled="false">
+
+    <TextView
+        android:id="@+id/txtDisciplinas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:text="Disciplina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtDisciplinasCadastradas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        android:text="Disciplinas Cadastradas"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDisciplinas" />
+
+    <EditText
+        android:id="@+id/disciplina"
+        android:layout_width="200dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@+id/txtDisciplinas"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnGravarDisciplina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/custom_btn_avancar"
+        android:onClick="btnGravarDisciplina"
+        android:text="Gravar"
+        app:layout_constraintStart_toEndOf="@+id/disciplina"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/listDisciplinas"
+        android:layout_width="409dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="110dp"
+        android:nestedScrollingEnabled="false"
+        android:scrollbars="horizontal"
+        android:stackFromBottom="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDisciplinasCadastradas"
+        app:layout_constraintVertical_bias="0.39" />
+
+    <Button
+        android:id="@+id/btnDisciplinaVoltar"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/custom_btn_voltar"
+        android:onClick="btnVoltarOnClick"
+        android:text="Voltar"
+        android:textColor="#fff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listDisciplinas" />
+
+    <Button
+        android:id="@+id/btnDisciplinaAvancar"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/custom_btn_avancar"
+        android:onClick="btnAvancarDisciplinaOnClick"
+        android:text="Avançar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listDisciplinas" />
+
+    <TextView
+        android:id="@+id/txtNotificacaoDisciplinas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listDisciplinas" />
+</androidx.constraintlayout.widget.ConstraintLayout>

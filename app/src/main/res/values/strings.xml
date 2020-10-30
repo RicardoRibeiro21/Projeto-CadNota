@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Projeto_Aluno_Notas</string>
+
+    // ComboBox
+    <string-array name="cursos">
+        <item>Ciência da Computação</item>
+        <item>Análise e Desenvolvimento de Sistemas</item>
+        <item>Sistemas da Informação</item>
+    </string-array>
+
+    <string-array name="disciplinas">
+
+    </string-array>
+</resources>
